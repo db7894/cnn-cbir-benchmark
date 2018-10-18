@@ -64,7 +64,7 @@ if __name__ == '__main__':
         content = f.readlines()
         content = [x.strip() for x in content]
     blocks = split_list(content, wanted_parts = parts)
-    for i in xrange(0, parts):
+    for i in range(0, parts):
         print("Sending task {}/{} for {}/{} images...".format(i+1, parts, len(blocks[i]), len(content)))
         pool.apply_async(cpu_task, args=(blocks[i], db_dir, save_dir,))
     pool.close()
