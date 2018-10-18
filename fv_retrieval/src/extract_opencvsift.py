@@ -30,7 +30,7 @@ def cpu_task(img_names, db_dir, save_dir):
                     f.write(str(128) + '\n')
                     f.write(str(0) + '\n')
                     f.close()
-                    print "Null: %s" % line
+                    print("Null: %s" % line)
                     continue
                 if len(des) > 0:
                     f.write(str(128) + '\n')
@@ -43,7 +43,7 @@ def cpu_task(img_names, db_dir, save_dir):
                         f.write(all_strs + '\n')
                     f.close()
 
-                print "%d(%d), %s, desc: %d" %(i+1, len(img_names), line, len(des))
+                print("%d(%d), %s, desc: %d" %(i+1, len(img_names), line, len(des)))
     except:
         import traceback
         traceback.print_exc()
