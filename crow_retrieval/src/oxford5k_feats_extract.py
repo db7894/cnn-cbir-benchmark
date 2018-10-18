@@ -41,7 +41,7 @@ def gpu_task(prototxt, caffemodel, layer, path_images, out, gpu=0):
     features = []
     image_names = []
     for i, path in enumerate(path_images):
-        print "%d(%d), %s"%((i+1), num_images, os.path.basename(path))
+        print("%d(%d), %s"%((i+1), num_images, os.path.basename(path)))
         d = opencv_format_img_for_vgg(path, False)
         # extract feature
         feat = extract_raw_features(net, layer, d)
@@ -55,7 +55,7 @@ def gpu_task(prototxt, caffemodel, layer, path_images, out, gpu=0):
     h5f['feats'] = features
     h5f['names'] = image_names
     h5f.close()
-    print "gpu %d task has finished..." % (int(gpu))
+    print("gpu %d task has finished..." % (int(gpu)))
 
 if __name__ == '__main__':
 
