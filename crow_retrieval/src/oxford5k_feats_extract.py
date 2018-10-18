@@ -67,7 +67,7 @@ if __name__ == '__main__':
     parts = len(gpusID)
     network = 'VggNet'
 
-    dir_images = '/home/yuanyong/datasets/oxford/*'
+    dir_images = '/home/mirlab/score-retrieval/data/mini_dataset/*' # changed to our dataset
     path_images = [os.path.join(dir_images, f) for f in sorted(glob.glob(dir_images))] #if f.endswith('.jpg')]
 
     # VggNet
